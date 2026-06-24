@@ -1,26 +1,45 @@
 package com.proiect.restaurant.entity;
 
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
+@Entity
+@Table(name = "orders")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "order_time", nullable = false)
     private LocalDateTime orderTime;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 50)
     private OrderStatus status = OrderStatus.CREATED;
 
+    @Column(name = "total_price", nullable = false)
     private double totalPrice = 0.0;
 
-    private Long customerId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderItem> orderItems = new ArrayList<>();
+
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Receipt receipt;
 
     public Order() {
         this.orderTime = LocalDateTime.now();
     }
 
-    public Order(Long customerId) {
+    public Order(Customer customer) {
         this();
-        this.customerId = customerId;
+        this.customer = customer;
     }
     
     // Getters and Setters
@@ -56,11 +75,27 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
-    public Long getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(Long customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
+
+    public Receipt getReceipt() {
+        return receipt;
+    }
+
+    public void setReceipt(Receipt receipt) {
+        this.receipt = receipt;
     }
 }

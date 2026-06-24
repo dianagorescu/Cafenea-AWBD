@@ -1,14 +1,11 @@
 package com.proiect.restaurant.repository;
 
 import com.proiect.restaurant.entity.MenuItem;
-
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import java.util.List;
-import java.util.Optional;
 
-public interface MenuItemRepository {
-    MenuItem save(MenuItem menuItem);
-    Optional<MenuItem> findById(Long id);
-    List<MenuItem> findAll();
-    void deleteById(Long id);
+@Repository
+public interface MenuItemRepository extends JpaRepository<MenuItem, Long> {
     List<MenuItem> findByAvailable(Boolean available);
 }

@@ -1,15 +1,13 @@
 package com.proiect.restaurant.repository;
 
 import com.proiect.restaurant.entity.CafeTable;
-
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-public interface CafeTableRepository {
-    CafeTable save(CafeTable table);
-    Optional<CafeTable> findById(Long id);
-    List<CafeTable> findAll();
-    void deleteById(Long id);
+@Repository
+public interface CafeTableRepository extends JpaRepository<CafeTable, Long> {
     Optional<CafeTable> findByTableNumber(Integer tableNumber);
     List<CafeTable> findByCapacityGreaterThanEqual(Integer capacity);
 }

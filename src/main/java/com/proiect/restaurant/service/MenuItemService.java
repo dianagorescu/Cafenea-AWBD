@@ -5,11 +5,14 @@ import com.proiect.restaurant.dto.MenuItemResponse;
 import com.proiect.restaurant.entity.MenuItem;
 import com.proiect.restaurant.exception.ResourceNotFoundException;
 import com.proiect.restaurant.repository.MenuItemRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
+@Transactional
 public class MenuItemService {
 
     private final MenuItemRepository menuItemRepository;

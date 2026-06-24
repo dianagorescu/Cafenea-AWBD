@@ -2,17 +2,14 @@ package com.proiect.restaurant.repository;
 
 import com.proiect.restaurant.entity.Reservation;
 import com.proiect.restaurant.entity.ReservationStatus;
-
-import java.time.LocalDateTime;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 
-public interface ReservationRepository {
-    Reservation save(Reservation reservation);
-    Optional<Reservation> findById(Long id);
-    List<Reservation> findAll();
-    void deleteById(Long id);
-    List<Reservation> findByCustomerId(Long customerId);
-    List<Reservation> findOverlappingReservations(Long tableId, LocalDateTime startTime, LocalDateTime endTime);
+@Repository
+public interface ReservationRepository extends JpaRepository<Reservation, Long> {
+    List<Reservation> findByCustomer_Id(Long customerId);
     List<Reservation> findByStatus(ReservationStatus status);
+    List<Reservation> findByCafeTable_IdAndStatusNotIn(Long tableId, Collection<ReservationStatus> statuses);
 }

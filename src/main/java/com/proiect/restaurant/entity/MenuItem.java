@@ -1,11 +1,18 @@
 package com.proiect.restaurant.entity;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
+@Entity
+@Table(name = "menu_items")
 public class MenuItem {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank(message = "Name is required")
@@ -67,5 +74,16 @@ public class MenuItem {
     
     public void setAvailable(Boolean available) {
         this.available = available;
+    }
+
+    @ManyToMany(mappedBy = "menuItems")
+    private List<Category> categories = new ArrayList<>();
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 }

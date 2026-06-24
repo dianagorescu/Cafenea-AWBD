@@ -11,11 +11,15 @@ import com.proiect.restaurant.exception.ResourceNotFoundException;
 import com.proiect.restaurant.repository.CustomerRepository;
 import com.proiect.restaurant.repository.ReservationRepository;
 import com.proiect.restaurant.repository.CafeTableRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
+@Transactional
 public class ReservationService {
 
     private final ReservationRepository reservationRepository;
@@ -31,7 +35,6 @@ public class ReservationService {
     }
     
     public ReservationResponse createReservation(ReservationRequest request) {
-   
         Customer customer = customerRepository.findById(request.getCustomerId())
             .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + request.getCustomerId()));
 
@@ -49,13 +52,16 @@ public class ReservationService {
         CafeTable availableTable = null;
 
         for (CafeTable table : suitableTables) {
-            List<Reservation> overlapping = reservationRepository.findOverlappingReservations(
+            List<Reservation> activeReservations = reservationRepository.findByCafeTable_IdAndStatusNotIn(
                 table.getId(),
-                request.getReservationTime(),
-                endTime
+                List.of(ReservationStatus.CANCELLED, ReservationStatus.COMPLETED)
             );
 
-            if (overlapping.isEmpty()) {
+            boolean hasOverlap = activeReservations.stream().anyMatch(r -> 
+                r.getReservationTime().isBefore(endTime) && r.getEndTime().isAfter(request.getReservationTime())
+            );
+
+            if (!hasOverlap) {
                 availableTable = table;
                 break;
             }
@@ -68,8 +74,8 @@ public class ReservationService {
         Reservation reservation = new Reservation(
             request.getReservationTime(),
             request.getDuration(),
-            customer.getId(),
-            availableTable.getId()
+            customer,
+            availableTable
         );
 
         Reservation savedReservation = reservationRepository.save(reservation);
@@ -89,7 +95,7 @@ public class ReservationService {
     }
     
     public List<ReservationResponse> getReservationsByCustomerId(Long customerId) {
-        return reservationRepository.findByCustomerId(customerId).stream()
+        return reservationRepository.findByCustomer_Id(customerId).stream()
             .map(this::toResponse)
             .collect(Collectors.toList());
     }
@@ -111,24 +117,24 @@ public class ReservationService {
         Reservation updatedReservation = reservationRepository.save(reservation);
         return toResponse(updatedReservation);
     }
+
+    public void deleteReservation(Long id) {
+        if (!reservationRepository.findById(id).isPresent()) {
+            throw new ResourceNotFoundException("Reservation not found with id: " + id);
+        }
+        reservationRepository.deleteById(id);
+    }
     
     private ReservationResponse toResponse(Reservation reservation) {
-        // Fetch customer and table separately
-        Customer customer = customerRepository.findById(reservation.getCustomerId())
-            .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + reservation.getCustomerId()));
-
-        CafeTable table = tableRepository.findById(reservation.getTableId())
-            .orElseThrow(() -> new ResourceNotFoundException("Table not found with id: " + reservation.getTableId()));
-
         return new ReservationResponse(
             reservation.getId(),
             reservation.getReservationTime(),
             reservation.getDuration(),
             reservation.getStatus(),
-            customer.getId(),
-            customer.getName(),
-            table.getId(),
-            table.getTableNumber()
+            reservation.getCustomer().getId(),
+            reservation.getCustomer().getName(),
+            reservation.getCafeTable().getId(),
+            reservation.getCafeTable().getTableNumber()
         );
     }
 }

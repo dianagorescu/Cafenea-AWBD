@@ -1,32 +1,46 @@
 package com.proiect.restaurant.entity;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "reservations")
 public class Reservation {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull(message = "Reservation time is required")
+    @Column(name = "reservation_time", nullable = false)
     private LocalDateTime reservationTime;
 
     @NotNull(message = "Duration is required")
     @Min(value = 30, message = "Duration must be at least 30 minutes")
+    @Column(nullable = false)
     private Integer duration; // in minutes
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 50)
     private ReservationStatus status = ReservationStatus.CONFIRMED;
 
-    private Long customerId;
-    private Long tableId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "table_id", nullable = false)
+    private CafeTable cafeTable;
 
     public Reservation() {}
 
-    public Reservation(LocalDateTime reservationTime, Integer duration, Long customerId, Long tableId) {
+    public Reservation(LocalDateTime reservationTime, Integer duration, Customer customer, CafeTable cafeTable) {
         this.reservationTime = reservationTime;
         this.duration = duration;
-        this.customerId = customerId;
-        this.tableId = tableId;
+        this.customer = customer;
+        this.cafeTable = cafeTable;
     }
     
     // Getters and Setters
@@ -62,20 +76,20 @@ public class Reservation {
         this.status = status;
     }
 
-    public Long getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(Long customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public Long getTableId() {
-        return tableId;
+    public CafeTable getCafeTable() {
+        return cafeTable;
     }
 
-    public void setTableId(Long tableId) {
-        this.tableId = tableId;
+    public void setCafeTable(CafeTable cafeTable) {
+        this.cafeTable = cafeTable;
     }
 
     public LocalDateTime getEndTime() {

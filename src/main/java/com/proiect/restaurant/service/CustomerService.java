@@ -6,11 +6,13 @@ import com.proiect.restaurant.entity.Customer;
 import com.proiect.restaurant.exception.BusinessException;
 import com.proiect.restaurant.exception.ResourceNotFoundException;
 import com.proiect.restaurant.repository.CustomerRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 @Transactional
 public class CustomerService {
     
@@ -50,6 +52,29 @@ public class CustomerService {
     public Customer findCustomerEntityById(Long id) {
         return customerRepository.findById(id)
             .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + id));
+    }
+
+    public CustomerResponse updateCustomer(Long id, CustomerRequest request) {
+        Customer customer = customerRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + id));
+
+        if (!customer.getEmail().equals(request.getEmail()) && customerRepository.existsByEmail(request.getEmail())) {
+            throw new BusinessException("Customer with email " + request.getEmail() + " already exists");
+        }
+
+        customer.setName(request.getName());
+        customer.setEmail(request.getEmail());
+        customer.setPhone(request.getPhone());
+
+        Customer updatedCustomer = customerRepository.save(customer);
+        return toResponse(updatedCustomer);
+    }
+
+    public void deleteCustomer(Long id) {
+        if (!customerRepository.findById(id).isPresent()) {
+            throw new ResourceNotFoundException("Customer not found with id: " + id);
+        }
+        customerRepository.deleteById(id);
     }
     
     private CustomerResponse toResponse(Customer customer) {
