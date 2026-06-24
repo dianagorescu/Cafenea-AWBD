@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Table Form')}">
+<body>
+<div class="form-card">
+    <form th:action="${tableId} == null ? @{/tables} : @{/tables/{id}(id=${tableId})}"
+          th:object="${tableRequest}" method="post" class="needs-validation" novalidate>
+        <div th:if="${errorMessage}" class="alert error" th:text="${errorMessage}"></div>
+
+        <label>
+            Table Number
+            <input type="number" th:field="*{tableNumber}" placeholder="1" min="1" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('tableNumber')}" th:errors="*{tableNumber}"></div>
+
+        <label>
+            Capacity
+            <input type="number" th:field="*{capacity}" placeholder="4" min="1" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('capacity')}" th:errors="*{capacity}"></div>
+
+        <div class="form-actions">
+            <button type="submit" class="button">Save</button>
+            <a class="button secondary" th:href="@{/tables}">Cancel</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Orders')}">
+<body>
+<div class="actions">
+    <a class="button" th:href="@{/orders/new}">New Order</a>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="order : ${orders}">
+            <td th:text="${order.id}">1</td>
+            <td th:text="${order.customerName}">Customer</td>
+            <td th:text="${order.status}">CREATED</td>
+            <td th:text="${order.totalPrice}">0.00</td>
+            <td class="actions-cell">
+                <form th:action="@{/orders/{id}/delete(id=${order.id})}" method="post" onsubmit="return confirm('Delete this order?');">
+                    <button type="submit" class="button small danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Customer Form')}">
+<body>
+<div class="form-card">
+    <form th:action="${customerId} == null ? @{/customers} : @{/customers/{id}(id=${customerId})}"
+          th:object="${customerRequest}" method="post" class="needs-validation" novalidate>
+        <div th:if="${errorMessage}" class="alert error" th:text="${errorMessage}"></div>
+
+        <label>
+            Name
+            <input type="text" th:field="*{name}" placeholder="Customer name" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+
+        <label>
+            Email
+            <input type="email" th:field="*{email}" placeholder="name@example.com" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+
+        <label>
+            Phone
+            <input type="tel" th:field="*{phone}" placeholder="0XXXXXXXXX" pattern="0[0-9]{9}" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+
+        <div class="form-actions">
+            <button type="submit" class="button">Save</button>
+            <a class="button secondary" th:href="@{/customers}">Cancel</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

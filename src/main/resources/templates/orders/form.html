@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Order Form')}">
+<body>
+<div class="form-card">
+    <form th:action="@{/orders}"
+          th:object="${orderRequest}"
+          method="post"
+          class="needs-validation"
+          novalidate>
+        <div th:if="${errorMessage}" class="alert error" th:text="${errorMessage}"></div>
+
+        <label>
+            Customer
+            <select th:field="*{customerId}" required>
+                <option th:value="" disabled selected>Select customer</option>
+                <option th:each="customer : ${customers}"
+                        th:value="${customer.id}"
+                        th:text="${customer.name}">Customer</option>
+            </select>
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}"></div>
+
+        <div th:each="item, idx : *{items}">
+            <fieldset class="item-fieldset">
+                <legend>Item <span th:text="${idx.index + 1}">1</span></legend>
+                <label>
+                    Menu Item
+                    <select th:field="*{items[${idx.index}].menuItemId}" required>
+                        <option th:value="" disabled selected>Select item</option>
+                        <option th:each="menuItem : ${menuItems}"
+                                th:value="${menuItem.id}"
+                                th:text="${menuItem.name}">Menu Item</option>
+                    </select>
+                </label>
+                <div class="field-error" th:if="${#fields.hasErrors('items[' + idx.index + '].menuItemId')}" th:errors="*{items[${idx.index}].menuItemId}"></div>
+
+                <label>
+                    Quantity
+                    <input type="number" th:field="*{items[${idx.index}].quantity}" min="1" required />
+                </label>
+                <div class="field-error" th:if="${#fields.hasErrors('items[' + idx.index + '].quantity')}" th:errors="*{items[${idx.index}].quantity}"></div>
+            </fieldset>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="button">Create Order</button>
+            <a class="button secondary" th:href="@{/orders}">Cancel</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

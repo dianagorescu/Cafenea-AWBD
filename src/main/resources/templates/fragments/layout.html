@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${pageTitle} ?: 'Restaurant Management'">Restaurant Management</title>
+    <link rel="stylesheet" th:href="@{/css/tailwind.css}" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <script th:src="@{/js/form-validation.js}" defer></script>
+    <script th:src="@{/js/order-form.js}" defer></script>
+</head>
+</body>
+<div th:fragment="layout(content, pageTitle)">
+    <header class="topbar">
+        <div class="page-container header-inner" style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="brand">Restaurant Admin</div>
+            <nav>
+                <a th:href="@{/dashboard}">Dashboard</a>
+                <a th:href="@{/customers}">Customers</a>
+                <a th:href="@{/tables}">Tables</a>
+                <a th:href="@{/menu-items}">Menu Items</a>
+                <a th:href="@{/reservations}">Reservations</a>
+                <a th:href="@{/orders}">Orders</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="page-container">
+            <section class="page-header">
+                <h1 th:text="${pageTitle}">Page</h1>
+            </section>
+            <div class="content" th:insert="${content}"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>© 2026 Restaurant Order System</span>
+    </footer>
+</div>
+</body>
+</html>

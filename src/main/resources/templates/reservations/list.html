@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Reservations')}">
+<body>
+<div class="actions">
+    <a class="button" th:href="@{/reservations/new}">New Reservation</a>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Table</th>
+            <th>Time</th>
+            <th>Duration</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${reservation.id}">1</td>
+            <td th:text="${reservation.customerName}">Customer</td>
+            <td th:text="${reservation.tableNumber}">1</td>
+            <td th:text="${reservation.reservationTime}">2026-01-01T12:00</td>
+            <td th:text="${reservation.duration}">60</td>
+            <td th:text="${reservation.status}">CONFIRMED</td>
+            <td class="actions-cell">
+                <form th:action="@{/reservations/{id}/cancel(id=${reservation.id})}" method="post">
+                    <button type="submit" class="button small">Cancel</button>
+                </form>
+                <form th:action="@{/reservations/{id}/complete(id=${reservation.id})}" method="post">
+                    <button type="submit" class="button small">Complete</button>
+                </form>
+                <form th:action="@{/reservations/{id}/delete(id=${reservation.id})}" method="post" onsubmit="return confirm('Delete this reservation?');">
+                    <button type="submit" class="button small danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

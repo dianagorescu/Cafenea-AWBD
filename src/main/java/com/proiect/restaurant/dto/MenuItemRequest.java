@@ -13,7 +13,7 @@ public class MenuItemRequest {
     
     @NotNull(message = "Price is required")
     @DecimalMin(value = "0.0", inclusive = false, message = "Price must be greater than 0")
-    private double price;
+    private Double price;
     
     @NotNull(message = "Available status is required")
     private Boolean available;

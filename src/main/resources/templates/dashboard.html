@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Dashboard')}">
+<body>
+<section class="dashboard-grid">
+    <div class="card">
+        <h2>Customers</h2>
+        <p th:text="${customerCount}">0</p>
+    </div>
+    <div class="card">
+        <h2>Tables</h2>
+        <p th:text="${tableCount}">0</p>
+    </div>
+    <div class="card">
+        <h2>Menu Items</h2>
+        <p th:text="${menuItemCount}">0</p>
+    </div>
+    <div class="card">
+        <h2>Reservations</h2>
+        <p th:text="${reservationCount}">0</p>
+    </div>
+    <div class="card">
+        <h2>Orders</h2>
+        <p th:text="${orderCount}">0</p>
+    </div>
+</section>
+</body>
+</html>

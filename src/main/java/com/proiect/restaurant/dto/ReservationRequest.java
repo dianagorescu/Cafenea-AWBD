@@ -3,6 +3,7 @@ package com.proiect.restaurant.dto;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -12,6 +13,8 @@ public class ReservationRequest {
     private Long customerId;
     
     @NotNull(message = "Reservation time is required")
+    @Future(message = "Reservation time must be in the future")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime reservationTime;
     
     @NotNull(message = "Duration is required")

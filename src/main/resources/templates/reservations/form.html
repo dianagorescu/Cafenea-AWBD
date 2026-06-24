@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Reservation Form')}">
+<body>
+<div class="form-card">
+    <form th:action="@{/reservations}"
+          th:object="${reservationRequest}"
+          method="post"
+          class="needs-validation"
+          novalidate>
+        <div th:if="${errorMessage}" class="alert error" th:text="${errorMessage}"></div>
+
+        <label>
+            Customer
+            <select th:field="*{customerId}" required>
+                <option th:value="" disabled selected>Select customer</option>
+                <option th:each="customer : ${customers}"
+                        th:value="${customer.id}"
+                        th:text="${customer.name}">Customer</option>
+            </select>
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}"></div>
+
+        <label>
+            Reservation Time
+            <input type="datetime-local" th:field="*{reservationTime}" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('reservationTime')}" th:errors="*{reservationTime}"></div>
+
+        <label>
+            Duration (minutes)
+            <input type="number" th:field="*{duration}" min="30" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('duration')}" th:errors="*{duration}"></div>
+
+        <label>
+            Number of People
+            <input type="number" th:field="*{numberOfPeople}" min="1" required />
+        </label>
+        <div class="field-error" th:if="${#fields.hasErrors('numberOfPeople')}" th:errors="*{numberOfPeople}"></div>
+
+        <div class="form-actions">
+            <button type="submit" class="button">Save</button>
+            <a class="button secondary" th:href="@{/reservations}">Cancel</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

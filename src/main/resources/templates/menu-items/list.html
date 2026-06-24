@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Menu Items')}">
+<body>
+<div class="actions">
+    <a class="button" th:href="@{/menu-items/new}">New Menu Item</a>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="item : ${menuItems}">
+            <td th:text="${item.id}">1</td>
+            <td th:text="${item.name}">Coffee</td>
+            <td th:text="${item.description}">Espresso</td>
+            <td th:text="${item.price}">5.00</td>
+            <td th:text="${item.available} ? 'Yes' : 'No'">Yes</td>
+            <td class="actions-cell">
+                <a th:href="@{/menu-items/{id}/edit(id=${item.id})}" class="button small">Edit</a>
+                <form th:action="@{/menu-items/{id}/delete(id=${item.id})}" method="post" onsubmit="return confirm('Delete this menu item?');">
+                    <button type="submit" class="button small danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

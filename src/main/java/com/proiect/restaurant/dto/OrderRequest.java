@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderRequest {
@@ -13,9 +14,11 @@ public class OrderRequest {
     
     @NotEmpty(message = "Order must contain at least one item")
     @Valid
-    private List<OrderItemRequest> items;
+    private List<OrderItemRequest> items = new ArrayList<>();
     
-    public OrderRequest() {}
+    public OrderRequest() {
+        this.items.add(new OrderItemRequest());
+    }
     
     public OrderRequest(Long customerId, List<OrderItemRequest> items) {
         this.customerId = customerId;

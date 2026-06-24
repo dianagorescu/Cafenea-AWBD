@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Tables')}">
+<body>
+<div class="actions">
+    <a class="button" th:href="@{/tables/new}">New Table</a>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Table Number</th>
+            <th>Capacity</th>
+            <th>Available</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="table : ${tables}">
+            <td th:text="${table.id}">1</td>
+            <td th:text="${table.tableNumber}">1</td>
+            <td th:text="${table.capacity}">4</td>
+            <td th:text="${table.available} ? 'Yes' : 'No'">Yes</td>
+            <td class="actions-cell">
+                <a th:href="@{/tables/{id}/edit(id=${table.id})}" class="button small">Edit</a>
+                <form th:action="@{/tables/{id}/delete(id=${table.id})}" method="post" onsubmit="return confirm('Delete this table?');">
+                    <button type="submit" class="button small danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
