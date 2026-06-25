@@ -1,7 +1,7 @@
 Baza de date: <http://localhost:8080/h2-console> \
 Swagger: [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html%23/)
 
-# Business requirements
+## Business requirements
 
 1.  In calitate de **client**, doresc sa pot avea o experienta personalizata, prin inregistrarea cu nume, email si numar de telefon.
 
@@ -23,65 +23,152 @@ Swagger: [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/s
 
 10. Ca **personal al cafenelei**, doresc sa adaug/ sterg produse din comanda unui client.
 
-## 5 main features -MVP {#main-features--mvp}
 
-### Operatii CRUD asupra meniului:
+## Descrierea proiectului
 
-- \`POST /api/menu-items\` - adauga un produs
+Acest proiect este o aplicație web pentru gestionarea unei cafenele. Scopul său este să ofere un sistem complet pentru:
 
-- \`GET /api/menu-items\` - listeaza toate produsele
+- administrarea meniului și a disponibilității produselor;
+- înregistrarea și gestionarea clienților;
+- crearea și urmărirea rezervărilor;
+- procesarea comenzilor și generarea bonurilor fiscale;
+- validare server-side și experiență de utilizare prietenoasă.
 
-- \`GET /api/menu-items/{id}\` - listeaza produsul cu id-ul -
+Aplicația are un front-end bazat pe Thymeleaf și Tailwind, și un back-end Java Spring Boot cu JPA/Hibernate.
 
-- \`GET /api/menu-items/available\` - listeaza doar produsele disponibile
+## Arhitectură
 
-- \`PUT /api/menu-items/{id}\` - face update la produsul cu id-ul -
+Arhitectura aplicației este bazată pe modelul MVC și include următoarele straturi:
 
-- \`DELETE /api/menu-items/{id}\` - sterge produsul cu id-ul -
+- `controller`: expune rutele web și API-urile REST, primește cererile și pregătește modelul pentru vizualizare.
+- `service`: implementează logica de business, validările, operațiile CRUD și paginare/sortare.
+- `repository`: folosește Spring Data JPA pentru accesul la baza de date.
+- `entity`: definește modelul de date pentru clienți, produse, comenzi, rezervări, mese și bonuri.
+- `dto`: definește obiecte de transfer pentru input și output.
+- `config`: inițializează datele, configurează logging și alte setări ale aplicației.
 
-  1.  Clientii se pot loga pentru a face rezervari si comenzi pentru urmarirea lor si personalizarea serviciului.
+Componenta de logging este implementată cu SLF4J + Logback, cu:
 
-- \`POST /api/customers\` - creare cont
+- niveluri configurate INFO, DEBUG și ERROR;
+- fișier principal `logs/app.log`;
+- fișier separat pentru erori `logs/error.log`;
+- aspect AOP pentru logare automată la intrarea/ieșirea metodelor din straturile de service.
 
-- \`GET /api/customers/{id}\` - listare client dupa id
+### Tehnologii folosite
 
-- \`GET /api/customers\` - listare toti clientii
+- Java 21
+- Spring Boot 3.2
+- Spring Data JPA
+- Hibernate
+- Thymeleaf
+- Tailwind CSS
+- H2 pentru dezvoltare locală
+- Maven + npm
 
-- \`PUT /api/customers/{id}\` - face update la clientul cu id-ul -
+## Setup instructions
 
-  2.  Permiterea clientiilor de a face rezervari pentru data si numar de persoane specific.(asignare automata). In cazul in care nu se poate efectua o rezervare(nu exista masa), se afiseaza un mesaj corespunzator.
+1. Deschide terminalul și intră în directorul proiectului
 
-- \`POST /api/reservations\` - creeaza rezervare
+2. Instalează dependențele npm pentru Tailwind:
 
-- \`GET /api/reservations/{id}\` - listeaza rezervarea cu id-ul -
+```powershell
+npm install
+```
 
-- \`GET /api/reservations\` - listeaza toate rezervarile
+3. Construiește fișierul CSS Tailwind:
 
-- \`PUT /api/reservations/{id}/complete\` - staff-ul poate marca o rezervare ca "completed"
+```powershell
+npm run build:css
+```
 
-- \`PUT /api/reservations/{id}/cancel\` - staff-ul poate anula o rezervare
+4. Rulează aplicația Spring Boot cu profilul H2:
 
-- \`GET /api/reservations/customer/{customerId}\` - listeaza rezervarea asignata clientului cu id-ul -
+```powershell
+cmd.exe /c ".\mvnw.cmd -Dspring-boot.run.profiles=h2 spring-boot:run"
+```
 
-  3.  Se poate procesa si urmari o comanda (un bon) cu mai multe produse.
+5. Accesează aplicația în browser:
 
-- \`POST /api/orders\` - creeaza comanda cu diferite produse
+- UI principal: `http://localhost:8080`
+- H2 Console: `http://localhost:8080/h2-console`
+- Swagger UI: `http://localhost:8080/swagger-ui/index.html#/`
 
-- \`GET /api/orders/{id}\` - listeaza intreaga comanda cu id-ul -
+### Parametri utili
 
-- \`GET /api/orders\` - listeaza toate comenziile
+- `app.pagination.default-size=10` în `src/main/resources/application.properties`
+- `logging.level.org.hibernate.SQL=DEBUG` pentru afișarea interogărilor SQL
 
-- \`PATCH /api/orders/{id}/status\` - face update la statusul comenzii cu id-ul -
+## API documentation
 
-- \`GET /api/orders/customers/{customerId}\` - listeaza toate comenziile clientului cu id-ul -
+### Clienți
 
-- \`DELETE /api/orders/{orderId}/items/{orderItemId}\` - sterge produsul cu id-ul - din comanda cu id-ul -
+- `GET /api/customers` - listează toți clienții
+- `GET /api/customers/{id}` - afișează un client după ID
+- `POST /api/customers` - creează un client
+- `PUT /api/customers/{id}` - actualizează un client
+- `DELETE /api/customers/{id}` - șterge un client
 
-  4.  Staff-ul poate vizualiza cate mese si cate locuri sunt disponibile.
+### Produse (menu items)
 
-- \`GET /api/tables\` - listeaza toate mesele
+- `GET /api/menu-items` - listează toate produsele
+- `GET /api/menu-items/{id}` - afișează produsul cu ID-ul specificat
+- `GET /api/menu-items/available` - listează numai produsele disponibile
+- `POST /api/menu-items` - adaugă un produs nou
+- `PUT /api/menu-items/{id}` - actualizează un produs
+- `DELETE /api/menu-items/{id}` - șterge un produs
 
-- \`GET /api/tables/available\` - listeaza doar mesele disponibile
+### Rezervări
+
+- `GET /api/reservations` - listează toate rezervările
+- `GET /api/reservations/{id}` - afișează o rezervare
+- `POST /api/reservations` - creează o rezervare
+- `PUT /api/reservations/{id}/complete` - marchează rezervarea ca finalizată
+- `PUT /api/reservations/{id}/cancel` - anulează rezervarea
+- `GET /api/reservations/customer/{customerId}` - rezervările unui client
+
+### Comenzi
+
+- `GET /api/orders` - listează comenzile
+- `GET /api/orders/{id}` - afișează o comandă
+- `POST /api/orders` - creează o comandă
+- `PATCH /api/orders/{id}/status` - actualizează statusul comenzii
+- `GET /api/orders/customers/{customerId}` - comenzile unui client
+- `DELETE /api/orders/{orderId}/items/{orderItemId}` - șterge un item dintr-o comandă
+
+### Mese
+
+- `GET /api/tables` - listează toate mesele
+- `GET /api/tables/available` - listează mesele disponibile
+
+## Screenshots
+
+
+- **Pagina clienți**
+![alt text](image.png)
+
+- **Pagina produse**
+![alt text](image-1.png)
+
+- **Pagina comenzi**
+![alt text](image-2.png)
+
+
+- **Pagina rezervări**
+![alt text](image-3.png)
+
+
+
+## Contribuții membrii echipei
+
+- **Diana** – implementare backend Spring Boot, logare SLF4J/Logback, servicii, paginare și sortare, API-uri, validare, design UI cu Thymeleaf și Tailwind.
+- **Marcel** – gestionare baze de date, migrari, entități JPA, inițializare date, testare.
+- **Diana** – integrare frontend, implementare template-uri Thymeleaf, navigare pagină, documentație.
+
+## Notă
+
+Proiectul este gândit pentru dezvoltare rapidă și testare locală cu H2. Pentru producție, se poate comuta profilul în `dev` și configura PostgreSQL în `application-dev.properties`.
+
+
 
 # ERD
 
