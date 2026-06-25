@@ -20,6 +20,8 @@ public class OrderWebController {
     private final OrderService orderService;
     private final CustomerService customerService;
     private final MenuItemService menuItemService;
+    @org.springframework.beans.factory.annotation.Value("${app.pagination.default-size:10}")
+    private int defaultSize;
 
     public OrderWebController(OrderService orderService,
                               CustomerService customerService,
@@ -30,8 +32,23 @@ public class OrderWebController {
     }
 
     @GetMapping
-    public String listOrders(Model model) {
-        model.addAttribute("orders", orderService.getAllOrders());
+    public String listOrders(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(required = false) Integer size,
+            @RequestParam(defaultValue = "orderTime") String sort,
+            @RequestParam(defaultValue = "desc") String dir,
+            Model model) {
+
+        int pageSize = (size == null) ? defaultSize : size;
+        org.springframework.data.domain.Sort sortObj = org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.fromString(dir), sort);
+        org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(page, pageSize, sortObj);
+
+        var ordersPage = orderService.getOrders(pageable);
+        model.addAttribute("ordersPage", ordersPage);
+        model.addAttribute("page", page);
+        model.addAttribute("size", pageSize);
+        model.addAttribute("sort", sort);
+        model.addAttribute("dir", dir);
         model.addAttribute("statuses", OrderStatus.values());
         return "orders/list";
     }

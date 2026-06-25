@@ -5,6 +5,7 @@ import com.proiect.restaurant.exception.BusinessException;
 import com.proiect.restaurant.service.MenuItemService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -14,14 +15,31 @@ import org.springframework.web.bind.annotation.*;
 public class MenuItemWebController {
 
     private final MenuItemService menuItemService;
+    @Value("${app.pagination.default-size:10}")
+    private int defaultSize;
 
     public MenuItemWebController(MenuItemService menuItemService) {
         this.menuItemService = menuItemService;
     }
 
     @GetMapping
-    public String listMenuItems(Model model) {
-        model.addAttribute("menuItems", menuItemService.getAllMenuItems());
+    public String listMenuItems(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(required = false) Integer size,
+            @RequestParam(defaultValue = "name") String sort,
+            @RequestParam(defaultValue = "asc") String dir,
+            Model model) {
+
+        int pageSize = (size == null) ? defaultSize : size;
+        org.springframework.data.domain.Sort sortObj = org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.fromString(dir), sort);
+        org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(page, pageSize, sortObj);
+
+        var itemsPage = menuItemService.getMenuItems(pageable);
+        model.addAttribute("menuItemsPage", itemsPage);
+        model.addAttribute("page", page);
+        model.addAttribute("size", pageSize);
+        model.addAttribute("sort", sort);
+        model.addAttribute("dir", dir);
         return "menu-items/list";
     }
 

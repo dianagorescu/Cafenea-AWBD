@@ -2,7 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Orders')}">
 <body>
 <div class="actions">
-    <a class="button" th:href="@{/orders/new}">New Order</a>
+    <div>
+        <a class="button" th:href="@{/orders/new}">New Order</a>
+    </div>
+    <div class="flex items-center gap-2">
+        <label class="text-sm text-gray-600">Sort:</label>
+        <select onchange="location.href='?page=0&size='+${size}+'&sort='+this.value+'&dir='+${dir}" class="px-2 py-1 rounded border">
+            <option value="orderTime" th:selected="${sort=='orderTime'}">Order Time</option>
+            <option value="totalPrice" th:selected="${sort=='totalPrice'}">Total Price</option>
+        </select>
+        <label class="text-sm text-gray-600">Size:</label>
+        <select onchange="location.href='?page=0&size='+this.value+'&sort='+${sort}+'&dir='+${dir}" class="px-2 py-1 rounded border">
+            <option th:value="5" th:selected="${size==5}">5</option>
+            <option th:value="10" th:selected="${size==10}">10</option>
+            <option th:value="25" th:selected="${size==25}">25</option>
+        </select>
+    </div>
 </div>
 <table>
     <thead>
@@ -15,7 +30,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr th:each="order : ${orders}">
+        <tr th:each="order : ${ordersPage.content}">
             <td th:text="${order.id}">1</td>
             <td th:text="${order.customerName}">Customer</td>
             <td th:text="${order.status}">CREATED</td>
@@ -28,5 +43,14 @@
         </tr>
     </tbody>
 </table>
+<div class="mt-4 flex items-center gap-2">
+    <a th:if="${ordersPage.hasPrevious()}" th:href="@{/orders(page=${ordersPage.number-1},size=${size},sort=${sort},dir=${dir})}" class="button small">Previous</a>
+    <span th:each="i : ${#numbers.sequence(0, ordersPage.totalPages-1)}">
+        <a th:href="@{/orders(page=${i},size=${size},sort=${sort},dir=${dir})}"
+           th:classappend="${i==ordersPage.number} ? ' button' : ' button secondary'"
+           th:text="${i+1}">1</a>
+    </span>
+    <a th:if="${ordersPage.hasNext()}" th:href="@{/orders(page=${ordersPage.number+1},size=${size},sort=${sort},dir=${dir})}" class="button small">Next</a>
+</div>
 </body>
 </html>

@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 @Service
 @Transactional
@@ -91,6 +93,11 @@ public class OrderService {
         return orderRepository.findAll().stream()
             .map(this::toResponse)
             .collect(Collectors.toList());
+    }
+
+    public Page<OrderResponse> getOrders(Pageable pageable) {
+        return orderRepository.findAll(pageable)
+            .map(this::toResponse);
     }
     
     public List<OrderResponse> getOrdersByCustomerId(Long customerId) {

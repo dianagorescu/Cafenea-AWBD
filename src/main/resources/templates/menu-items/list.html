@@ -2,7 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::body}, 'Menu Items')}">
 <body>
 <div class="actions">
-    <a class="button" th:href="@{/menu-items/new}">New Menu Item</a>
+    <div>
+        <a class="button" th:href="@{/menu-items/new}">New Menu Item</a>
+    </div>
+    <div class="flex items-center gap-2">
+        <label class="text-sm text-gray-600">Sort:</label>
+        <select onchange="location.href='?page=0&size='+${size}+'&sort='+this.value+'&dir='+${dir}" class="px-2 py-1 rounded border">
+            <option value="name" th:selected="${sort=='name'}">Name</option>
+            <option value="price" th:selected="${sort=='price'}">Price</option>
+        </select>
+        <label class="text-sm text-gray-600">Size:</label>
+        <select onchange="location.href='?page=0&size='+this.value+'&sort='+${sort}+'&dir='+${dir}" class="px-2 py-1 rounded border">
+            <option th:value="5" th:selected="${size==5}">5</option>
+            <option th:value="10" th:selected="${size==10}">10</option>
+            <option th:value="25" th:selected="${size==25}">25</option>
+        </select>
+    </div>
 </div>
 <table>
     <thead>
@@ -16,7 +31,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr th:each="item : ${menuItems}">
+        <tr th:each="item : ${menuItemsPage.content}">
             <td th:text="${item.id}">1</td>
             <td th:text="${item.name}">Coffee</td>
             <td th:text="${item.description}">Espresso</td>
@@ -31,5 +46,14 @@
         </tr>
     </tbody>
 </table>
+<div class="mt-4 flex items-center gap-2">
+    <a th:if="${menuItemsPage.hasPrevious()}" th:href="@{/menu-items(page=${menuItemsPage.number-1},size=${size},sort=${sort},dir=${dir})}" class="button small">Previous</a>
+    <span th:each="i : ${#numbers.sequence(0, menuItemsPage.totalPages-1)}">
+        <a th:href="@{/menu-items(page=${i},size=${size},sort=${sort},dir=${dir})}"
+           th:classappend="${i==menuItemsPage.number} ? ' button' : ' button secondary'"
+           th:text="${i+1}">1</a>
+    </span>
+    <a th:if="${menuItemsPage.hasNext()}" th:href="@{/menu-items(page=${menuItemsPage.number+1},size=${size},sort=${sort},dir=${dir})}" class="button small">Next</a>
+</div>
 </body>
 </html>

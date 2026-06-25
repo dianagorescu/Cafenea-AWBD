@@ -11,6 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 @Service
 @Transactional
@@ -47,6 +49,11 @@ public class CustomerService {
         return customerRepository.findAll().stream()
             .map(this::toResponse)
             .collect(Collectors.toList());
+    }
+
+    public Page<CustomerResponse> getCustomers(Pageable pageable) {
+        return customerRepository.findAll(pageable)
+            .map(this::toResponse);
     }
     
     public Customer findCustomerEntityById(Long id) {
