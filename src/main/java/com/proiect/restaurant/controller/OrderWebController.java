@@ -9,6 +9,8 @@ import com.proiect.restaurant.service.MenuItemService;
 import com.proiect.restaurant.service.OrderService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +33,8 @@ public class OrderWebController {
         this.menuItemService = menuItemService;
     }
 
+    private static final Logger logger = LoggerFactory.getLogger(OrderWebController.class);
+
     @GetMapping
     public String listOrders(
             @RequestParam(defaultValue = "0") int page,
@@ -42,6 +46,7 @@ public class OrderWebController {
         int pageSize = (size == null) ? defaultSize : size;
         org.springframework.data.domain.Sort sortObj = org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.fromString(dir), sort);
         org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(page, pageSize, sortObj);
+        logger.debug("Listing orders page={}, size={}, sort={}, dir={}", page, pageSize, sort, dir);
 
         var ordersPage = orderService.getOrders(pageable);
         model.addAttribute("ordersPage", ordersPage);
@@ -55,6 +60,7 @@ public class OrderWebController {
 
     @GetMapping("/new")
     public String createOrderForm(Model model) {
+        logger.debug("Showing create order form");
         OrderRequest request = new OrderRequest();
         request.getItems().clear();
         request.getItems().add(new com.proiect.restaurant.dto.OrderItemRequest());
@@ -81,7 +87,9 @@ public class OrderWebController {
 
         try {
             orderService.createOrder(orderRequest);
+            logger.info("Created order for customerId={}", orderRequest.getCustomerId());
         } catch (BusinessException ex) {
+            logger.warn("Create order failed: {}", ex.getMessage());
             model.addAttribute("errorMessage", ex.getMessage());
             return "orders/form";
         }

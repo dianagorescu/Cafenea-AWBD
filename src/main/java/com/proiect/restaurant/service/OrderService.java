@@ -7,6 +7,8 @@ import com.proiect.restaurant.exception.ResourceNotFoundException;
 import com.proiect.restaurant.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,6 +19,7 @@ import org.springframework.data.domain.Pageable;
 @Transactional
 public class OrderService {
 
+    private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
     private final OrderRepository orderRepository;
     private final OrderItemRepository orderItemRepository;
     private final CustomerRepository customerRepository;
@@ -38,6 +41,7 @@ public class OrderService {
     public OrderResponse createOrder(OrderRequest request) {
         Customer customer = customerRepository.findById(request.getCustomerId())
             .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + request.getCustomerId()));
+        logger.info("Creating order for customerId={}", request.getCustomerId());
 
         Order order = new Order(customer);
         Order savedOrder = orderRepository.save(order);
@@ -48,6 +52,7 @@ public class OrderService {
                 .orElseThrow(() -> new ResourceNotFoundException("Menu item not found with id: " + itemRequest.getMenuItemId()));
 
             if (!menuItem.getAvailable()) {
+                logger.error("Menu item not available: id={} name={}", menuItem.getId(), menuItem.getName());
                 throw new BusinessException("Menu item '" + menuItem.getName() + "' is not available");
             }
 
@@ -71,12 +76,14 @@ public class OrderService {
         savedOrder.setReceipt(receipt);
 
         savedOrder = orderRepository.save(savedOrder);
+        logger.debug("Order created id={} totalPrice={}", savedOrder.getId(), savedOrder.getTotalPrice());
         return toResponse(savedOrder);
     }
     
     public OrderResponse updateOrderStatus(Long id, OrderStatusUpdateRequest request) {
         Order order = orderRepository.findById(id)
             .orElseThrow(() -> new ResourceNotFoundException("Order not found with id: " + id));
+        logger.info("Updating order status id={} status={}", id, request.getStatus());
         
         order.setStatus(request.getStatus());
         Order updatedOrder = orderRepository.save(order);
@@ -84,6 +91,7 @@ public class OrderService {
     }
     
     public OrderResponse getOrderById(Long id) {
+        logger.debug("Fetching order by id={}", id);
         Order order = orderRepository.findById(id)
             .orElseThrow(() -> new ResourceNotFoundException("Order not found with id: " + id));
         return toResponse(order);
@@ -96,6 +104,7 @@ public class OrderService {
     }
 
     public Page<OrderResponse> getOrders(Pageable pageable) {
+        logger.debug("Listing orders page={}, size={}, sort={}", pageable.getPageNumber(), pageable.getPageSize(), pageable.getSort());
         return orderRepository.findAll(pageable)
             .map(this::toResponse);
     }
@@ -107,6 +116,7 @@ public class OrderService {
     }
     
     public void removeItemFromOrder(Long orderId, Long orderItemId) {
+        logger.info("Removing item {} from order {}", orderItemId, orderId);
         Order order = orderRepository.findById(orderId)
             .orElseThrow(() -> new ResourceNotFoundException("Order not found with id: " + orderId));
         
@@ -134,10 +144,13 @@ public class OrderService {
         });
 
         orderRepository.save(order);
+        logger.debug("Item {} removed from order {}. New total={}", orderItemId, orderId, order.getTotalPrice());
     }
 
     public void deleteOrder(Long id) {
+        logger.info("Deleting order id={}", id);
         if (!orderRepository.findById(id).isPresent()) {
+            logger.error("Order delete failed: not found id={}", id);
             throw new ResourceNotFoundException("Order not found with id: " + id);
         }
         orderRepository.deleteById(id);

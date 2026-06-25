@@ -5,6 +5,8 @@ import com.proiect.restaurant.exception.BusinessException;
 import com.proiect.restaurant.service.MenuItemService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class MenuItemWebController {
 
     private final MenuItemService menuItemService;
+    private static final Logger logger = LoggerFactory.getLogger(MenuItemWebController.class);
     @Value("${app.pagination.default-size:10}")
     private int defaultSize;
 
@@ -33,6 +36,7 @@ public class MenuItemWebController {
         int pageSize = (size == null) ? defaultSize : size;
         org.springframework.data.domain.Sort sortObj = org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.fromString(dir), sort);
         org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(page, pageSize, sortObj);
+        logger.debug("Listing menu-items page={}, size={}, sort={}, dir={}", page, pageSize, sort, dir);
 
         var itemsPage = menuItemService.getMenuItems(pageable);
         model.addAttribute("menuItemsPage", itemsPage);
@@ -45,6 +49,7 @@ public class MenuItemWebController {
 
     @GetMapping("/new")
     public String createMenuItemForm(Model model) {
+        logger.debug("Showing create menu item form");
         var request = new MenuItemRequest();
         request.setAvailable(Boolean.TRUE);
         model.addAttribute("menuItemRequest", request);
@@ -61,7 +66,9 @@ public class MenuItemWebController {
 
         try {
             menuItemService.createMenuItem(request);
+            logger.info("Created menu item name={}", request.getName());
         } catch (BusinessException ex) {
+            logger.warn("Create menu item failed: {}", ex.getMessage());
             model.addAttribute("errorMessage", ex.getMessage());
             return "menu-items/form";
         }
@@ -102,6 +109,7 @@ public class MenuItemWebController {
     @PostMapping("/{id}/delete")
     public String deleteMenuItem(@PathVariable Long id) {
         menuItemService.deleteMenuItem(id);
+        logger.info("Deleted menu item id={}", id);
         return "redirect:/menu-items";
     }
 }

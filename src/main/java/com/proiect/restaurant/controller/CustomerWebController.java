@@ -1,6 +1,8 @@
 package com.proiect.restaurant.controller;
 
 import com.proiect.restaurant.dto.CustomerRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.proiect.restaurant.exception.BusinessException;
 import com.proiect.restaurant.service.CustomerService;
 import jakarta.validation.Valid;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerWebController {
 
     private final CustomerService customerService;
+    private static final Logger logger = LoggerFactory.getLogger(CustomerWebController.class);
     @Value("${app.pagination.default-size:10}")
     private int defaultSize;
 
@@ -33,6 +36,7 @@ public class CustomerWebController {
         int pageSize = (size == null) ? defaultSize : size;
         org.springframework.data.domain.Sort sortObj = org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.fromString(dir), sort);
         org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(page, pageSize, sortObj);
+        logger.debug("Listing customers page={}, size={}, sort={}, dir={}", page, pageSize, sort, dir);
 
         var customersPage = customerService.getCustomers(pageable);
         model.addAttribute("customersPage", customersPage);
@@ -45,6 +49,7 @@ public class CustomerWebController {
 
     @GetMapping("/new")
     public String createCustomerForm(Model model) {
+        logger.debug("Showing create customer form");
         model.addAttribute("customerRequest", new CustomerRequest());
         return "customers/form";
     }
@@ -59,7 +64,9 @@ public class CustomerWebController {
 
         try {
             customerService.createCustomer(request);
+            logger.info("Created customer email={}", request.getEmail());
         } catch (BusinessException ex) {
+            logger.warn("Create customer failed: {}", ex.getMessage());
             model.addAttribute("errorMessage", ex.getMessage());
             return "customers/form";
         }
@@ -100,6 +107,7 @@ public class CustomerWebController {
     @PostMapping("/{id}/delete")
     public String deleteCustomer(@PathVariable Long id) {
         customerService.deleteCustomer(id);
+        logger.info("Deleted customer id={}", id);
         return "redirect:/customers";
     }
 }

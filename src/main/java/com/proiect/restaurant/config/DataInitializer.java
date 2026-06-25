@@ -2,13 +2,18 @@ package com.proiect.restaurant.config;
 
 import com.proiect.restaurant.entity.*;
 import com.proiect.restaurant.repository.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDateTime;
 
 @Component
 public class DataInitializer implements CommandLineRunner {
+    private static final Logger logger = LoggerFactory.getLogger(DataInitializer.class);
     
     private final CafeTableRepository tableRepository;
     private final MenuItemRepository menuItemRepository;
@@ -39,13 +44,23 @@ public class DataInitializer implements CommandLineRunner {
     
     @Override
     public void run(String... args) {
+        try {
+            Path logsDir = Path.of("logs");
+            if (!Files.exists(logsDir)) {
+                Files.createDirectories(logsDir);
+                logger.info("Created logs directory at {}", logsDir.toAbsolutePath());
+            }
+        } catch (Exception ex) {
+            // If we can't create logs dir, log to console
+            System.err.println("Could not create logs directory: " + ex.getMessage());
+        }
         // Check if data already exists
         if (!tableRepository.findAll().isEmpty()) {
-            System.out.println("Database already initialized - skipping data initialization");
+            logger.info("Database already initialized - skipping data initialization");
             return;
         }
         
-        System.out.println("Initializing database with sample data...");
+        logger.info("Initializing database with sample data...");
         
         // MESE
         CafeTable table1 = tableRepository.save(new CafeTable(1, 2));
@@ -284,6 +299,6 @@ public class DataInitializer implements CommandLineRunner {
         receiptRepository.save(new Receipt("REC-SEED-2", order2.getTotalPrice(), order2));
         receiptRepository.save(new Receipt("REC-SEED-3", order3.getTotalPrice(), order3));
         
-        System.out.println("Database initialized");
+        logger.info("Database initialized");
     }
 }

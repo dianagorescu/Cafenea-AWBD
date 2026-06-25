@@ -1,0 +1,4260 @@
+2026-06-25 23:07:35.568 [main] INFO  c.proiect.restaurant.DemoApplication - Starting DemoApplication using Java 24.0.1 with PID 10052 (C:\Users\diana\Documents\Cafenea-AWBD\target\classes started by diana in c:\Users\diana\Documents\Cafenea-AWBD)
+2026-06-25 23:07:35.570 [main] INFO  c.proiect.restaurant.DemoApplication - The following 1 profile is active: "h2"
+2026-06-25 23:07:36.244 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 23:07:36.314 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+2026-06-25 23:07:36.963 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-25 23:07:36.977 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:07:36.980 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 23:07:36.981 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-06-25 23:07:37.042 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-25 23:07:37.042 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1421 ms
+2026-06-25 23:07:37.071 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 23:07:37.253 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:restaurantdb user=SA
+2026-06-25 23:07:37.256 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-25 23:07:37.269 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:restaurantdb'
+2026-06-25 23:07:37.669 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 23:07:37.705 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 23:07:38.651 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 23:07:39.297 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 23:07:39.680 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:07:39.701 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-06-25 23:07:39.708 [main] INFO  c.proiect.restaurant.DemoApplication - Started DemoApplication in 4.8 seconds (process running for 5.134)
+2026-06-25 23:07:39.790 [main] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0
+2026-06-25 23:07:39.849 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:07:39.866 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:07:39.867 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:07:39.870 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:07:39.872 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:07:39.875 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:07:39.890 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.898 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.900 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.902 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.903 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.905 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.907 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.909 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.910 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.912 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.914 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.916 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.917 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.919 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.920 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:39.925 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (name, id) 
+    values
+        (?, default)
+2026-06-25 23:07:39.931 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (name, id) 
+    values
+        (?, default)
+2026-06-25 23:07:39.939 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:07:39.950 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.category_id,
+        mi1_1.id,
+        mi1_1.available,
+        mi1_1.description,
+        mi1_1.name,
+        mi1_1.price 
+    from
+        category_menu_items mi1_0 
+    join
+        menu_items mi1_1 
+            on mi1_1.id=mi1_0.menu_item_id 
+    where
+        mi1_0.category_id=?
+2026-06-25 23:07:39.953 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.954 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.955 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.956 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.957 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.958 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.958 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.959 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.960 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.961 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.965 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.966 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.966 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.967 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.967 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.968 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.969 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.969 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.970 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.971 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.974 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:07:39.975 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.category_id,
+        mi1_1.id,
+        mi1_1.available,
+        mi1_1.description,
+        mi1_1.name,
+        mi1_1.price 
+    from
+        category_menu_items mi1_0 
+    join
+        menu_items mi1_1 
+            on mi1_1.id=mi1_0.menu_item_id 
+    where
+        mi1_0.category_id=?
+2026-06-25 23:07:39.976 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.976 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.978 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.978 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.979 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:07:39.980 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.981 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.982 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.982 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.983 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:07:39.999 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:07:40.002 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:07:40.003 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:07:40.005 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:07:40.009 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:07:40.012 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:07:40.014 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:07:40.017 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.022 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.024 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.031 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:07:40.041 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:07:40.046 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.048 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.049 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.051 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:07:40.054 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:07:40.057 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.059 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.060 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.062 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:07:40.066 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:07:40.070 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.071 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:07:40.073 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:29.248 [main] INFO  c.proiect.restaurant.DemoApplication - Starting DemoApplication using Java 24.0.1 with PID 5712 (C:\Users\diana\Documents\Cafenea-AWBD\target\classes started by diana in c:\Users\diana\Documents\Cafenea-AWBD)
+2026-06-25 23:11:29.249 [main] INFO  c.proiect.restaurant.DemoApplication - The following 1 profile is active: "h2"
+2026-06-25 23:11:29.893 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 23:11:29.960 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 8 JPA repository interfaces.
+2026-06-25 23:11:30.472 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-25 23:11:30.479 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:11:30.481 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 23:11:30.482 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-06-25 23:11:30.535 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-25 23:11:30.536 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1236 ms
+2026-06-25 23:11:30.560 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 23:11:30.741 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:restaurantdb user=SA
+2026-06-25 23:11:30.743 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-25 23:11:30.757 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:restaurantdb'
+2026-06-25 23:11:31.130 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 23:11:31.164 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 23:11:31.978 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 23:11:32.588 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 23:11:32.945 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:11:32.953 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-25 23:11:32.954 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 23:11:32.956 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-25 23:11:32.958 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-25 23:11:32.968 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-25 23:11:32.981 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-06-25 23:11:50.001 [main] INFO  c.proiect.restaurant.DemoApplication - Starting DemoApplication using Java 24.0.1 with PID 22120 (C:\Users\diana\Documents\Cafenea-AWBD\target\classes started by diana in c:\Users\diana\Documents\Cafenea-AWBD)
+2026-06-25 23:11:50.009 [main] INFO  c.proiect.restaurant.DemoApplication - The following 1 profile is active: "h2"
+2026-06-25 23:11:50.756 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 23:11:50.841 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+2026-06-25 23:11:51.475 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-25 23:11:51.482 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:11:51.484 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 23:11:51.484 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-06-25 23:11:51.538 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-25 23:11:51.539 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1479 ms
+2026-06-25 23:11:51.567 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 23:11:51.778 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:restaurantdb user=SA
+2026-06-25 23:11:51.780 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-25 23:11:51.793 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:restaurantdb'
+2026-06-25 23:11:52.251 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 23:11:52.303 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 23:11:52.967 [main] INFO  c.proiect.restaurant.DemoApplication - Starting DemoApplication using Java 24.0.1 with PID 25012 (C:\Users\diana\Documents\Cafenea-AWBD\target\classes started by diana in c:\Users\diana\Documents\Cafenea-AWBD)
+2026-06-25 23:11:52.969 [main] INFO  c.proiect.restaurant.DemoApplication - The following 1 profile is active: "h2"
+2026-06-25 23:11:53.343 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 23:11:53.643 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 23:11:53.718 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 8 JPA repository interfaces.
+2026-06-25 23:11:54.012 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 23:11:54.312 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-25 23:11:54.318 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:11:54.320 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 23:11:54.321 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-06-25 23:11:54.382 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-25 23:11:54.383 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1357 ms
+2026-06-25 23:11:54.409 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 23:11:54.421 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:11:54.443 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-06-25 23:11:54.451 [main] INFO  c.proiect.restaurant.DemoApplication - Started DemoApplication in 4.994 seconds (process running for 5.353)
+2026-06-25 23:11:54.547 [main] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0
+2026-06-25 23:11:54.553 [main] INFO  c.p.r.config.DataInitializer - Initializing database with sample data...
+2026-06-25 23:11:54.590 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:restaurantdb user=SA
+2026-06-25 23:11:54.592 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-25 23:11:54.599 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:11:54.602 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:restaurantdb'
+2026-06-25 23:11:54.614 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:11:54.616 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:11:54.618 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:11:54.621 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:11:54.623 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:11:54.637 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.643 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.646 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.648 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.650 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.652 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.653 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.655 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.657 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.659 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.662 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.663 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.665 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.667 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.668 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.673 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (name, id) 
+    values
+        (?, default)
+2026-06-25 23:11:54.677 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (name, id) 
+    values
+        (?, default)
+2026-06-25 23:11:54.688 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:11:54.698 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.category_id,
+        mi1_1.id,
+        mi1_1.available,
+        mi1_1.description,
+        mi1_1.name,
+        mi1_1.price 
+    from
+        category_menu_items mi1_0 
+    join
+        menu_items mi1_1 
+            on mi1_1.id=mi1_0.menu_item_id 
+    where
+        mi1_0.category_id=?
+2026-06-25 23:11:54.702 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.703 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.704 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.705 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.707 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.708 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.709 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.710 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.710 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.711 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.716 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.717 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.717 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.718 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.719 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.719 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.720 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.720 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.722 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.723 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.725 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:11:54.726 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.category_id,
+        mi1_1.id,
+        mi1_1.available,
+        mi1_1.description,
+        mi1_1.name,
+        mi1_1.price 
+    from
+        category_menu_items mi1_0 
+    join
+        menu_items mi1_1 
+            on mi1_1.id=mi1_0.menu_item_id 
+    where
+        mi1_0.category_id=?
+2026-06-25 23:11:54.727 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.728 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.728 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.729 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.730 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:11:54.731 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.733 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.733 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.734 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.734 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:11:54.750 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:11:54.752 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:11:54.755 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:11:54.756 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:11:54.760 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:11:54.764 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:11:54.766 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:11:54.771 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.774 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.776 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.782 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:11:54.791 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:11:54.796 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.798 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.799 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.801 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:11:54.803 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:11:54.805 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.807 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.808 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.810 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:11:54.812 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:11:54.815 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.817 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.819 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:11:54.820 [main] INFO  c.p.r.config.DataInitializer - Database initialized
+2026-06-25 23:11:55.018 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 23:11:55.053 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 23:11:55.912 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 23:11:56.499 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 23:11:56.861 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:11:56.869 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-25 23:11:56.870 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 23:11:56.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-25 23:11:56.874 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-25 23:11:56.885 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-25 23:11:56.898 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-06-25 23:12:37.808 [main] INFO  c.proiect.restaurant.DemoApplication - Starting DemoApplication using Java 24.0.1 with PID 15584 (C:\Users\diana\Documents\Cafenea-AWBD\target\classes started by diana in C:\Users\diana\Documents\Cafenea-AWBD)
+2026-06-25 23:12:37.809 [main] INFO  c.proiect.restaurant.DemoApplication - The following 1 profile is active: "h2"
+2026-06-25 23:12:38.486 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 23:12:38.552 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 8 JPA repository interfaces.
+2026-06-25 23:12:39.066 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-25 23:12:39.073 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:12:39.075 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 23:12:39.075 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-06-25 23:12:39.128 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-25 23:12:39.129 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1263 ms
+2026-06-25 23:12:39.153 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 23:12:39.314 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:restaurantdb user=SA
+2026-06-25 23:12:39.315 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-25 23:12:39.325 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:restaurantdb'
+2026-06-25 23:12:39.702 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 23:12:39.736 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 23:12:40.590 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 23:12:41.179 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 23:12:41.569 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:12:41.589 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-06-25 23:12:41.596 [main] INFO  c.proiect.restaurant.DemoApplication - Started DemoApplication in 4.295 seconds (process running for 4.618)
+2026-06-25 23:12:41.676 [main] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0
+2026-06-25 23:12:41.682 [main] INFO  c.p.r.config.DataInitializer - Initializing database with sample data...
+2026-06-25 23:12:41.731 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:12:41.749 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:12:41.752 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:12:41.754 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:12:41.757 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:12:41.758 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        cafe_tables
+        (capacity, table_number, id) 
+    values
+        (?, ?, default)
+2026-06-25 23:12:41.771 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.780 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.782 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.784 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.786 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.788 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.790 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.791 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.793 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.795 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.797 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.799 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.801 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.803 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.804 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        menu_items
+        (available, description, name, price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.810 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (name, id) 
+    values
+        (?, default)
+2026-06-25 23:12:41.815 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (name, id) 
+    values
+        (?, default)
+2026-06-25 23:12:41.823 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:12:41.832 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.category_id,
+        mi1_1.id,
+        mi1_1.available,
+        mi1_1.description,
+        mi1_1.name,
+        mi1_1.price 
+    from
+        category_menu_items mi1_0 
+    join
+        menu_items mi1_1 
+            on mi1_1.id=mi1_0.menu_item_id 
+    where
+        mi1_0.category_id=?
+2026-06-25 23:12:41.835 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.836 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.837 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.838 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.839 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.841 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.842 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.843 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.844 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.845 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.848 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.849 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.850 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.850 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.851 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.851 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.853 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.853 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.854 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.854 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.858 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:12:41.859 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.category_id,
+        mi1_1.id,
+        mi1_1.available,
+        mi1_1.description,
+        mi1_1.name,
+        mi1_1.price 
+    from
+        category_menu_items mi1_0 
+    join
+        menu_items mi1_1 
+            on mi1_1.id=mi1_0.menu_item_id 
+    where
+        mi1_0.category_id=?
+2026-06-25 23:12:41.860 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.860 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.861 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.861 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.862 [main] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:12:41.863 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.864 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.865 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.866 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.866 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        category_menu_items
+        (category_id, menu_item_id) 
+    values
+        (?, ?)
+2026-06-25 23:12:41.881 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:12:41.883 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:12:41.885 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:12:41.886 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:12:41.891 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:12:41.894 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:12:41.896 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        reservations
+        (table_id, customer_id, duration, reservation_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2026-06-25 23:12:41.901 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.905 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.907 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.914 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:12:41.924 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:12:41.928 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.930 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.931 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.934 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:12:41.938 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:12:41.938 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (customer_id, order_time, status, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.941 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.942 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        order_items
+        (menu_item_id, order_id, price, quantity, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.945 [main] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        r1_0.receipt_number,
+        r1_0.total_price,
+        o1_0.status,
+        o1_0.total_price,
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        orders o1_0 
+    join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    left join
+        receipts r1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        order_items oi1_0 
+            on o1_0.id=oi1_0.order_id 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        o1_0.id=?
+2026-06-25 23:12:41.947 [main] DEBUG org.hibernate.SQL - 
+    update
+        orders 
+    set
+        customer_id=?,
+        order_time=?,
+        status=?,
+        total_price=? 
+    where
+        id=?
+2026-06-25 23:12:41.950 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.952 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.953 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        receipts
+        (issue_time, order_id, receipt_number, total_price, id) 
+    values
+        (?, ?, ?, ?, default)
+2026-06-25 23:12:41.954 [main] INFO  c.p.r.config.DataInitializer - Database initialized
+2026-06-25 23:12:51.476 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 23:12:51.483 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-25 23:12:51.485 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-06-25 23:12:51.546 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0
+2026-06-25 23:12:51.551 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0
+2026-06-25 23:12:51.598 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:12:51.600 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:12:51.609 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:12:51.614 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:12:51.634 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:12:51.638 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:12:51.646 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0
+2026-06-25 23:12:51.654 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0
+2026-06-25 23:12:51.666 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        o1_0.order_time,
+        o1_0.status,
+        o1_0.total_price 
+    from
+        orders o1_0
+2026-06-25 23:12:51.675 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        o1_0.status,
+        o1_0.total_price,
+        r1_0.receipt_number,
+        r1_0.total_price 
+    from
+        receipts r1_0 
+    join
+        orders o1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    where
+        r1_0.order_id=?
+2026-06-25 23:12:51.678 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        o1_0.status,
+        o1_0.total_price,
+        r1_0.receipt_number,
+        r1_0.total_price 
+    from
+        receipts r1_0 
+    join
+        orders o1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    where
+        r1_0.order_id=?
+2026-06-25 23:12:51.683 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        o1_0.status,
+        o1_0.total_price,
+        r1_0.receipt_number,
+        r1_0.total_price 
+    from
+        receipts r1_0 
+    join
+        orders o1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    where
+        r1_0.order_id=?
+2026-06-25 23:12:51.685 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        order_items oi1_0 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        oi1_0.order_id=?
+2026-06-25 23:12:51.685 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        order_items oi1_0 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        oi1_0.order_id=?
+2026-06-25 23:12:51.685 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        order_items oi1_0 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        oi1_0.order_id=?
+2026-06-25 23:12:52.196 [http-nio-8080-exec-3] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:12:54.128 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    order by
+        c1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:12:54.226 [http-nio-8080-exec-6] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:12:59.966 [http-nio-8080-exec-5] INFO  c.p.r.service.CustomerService - Deleting customer id=3
+2026-06-25 23:12:59.970 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:12:59.979 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        customers 
+    where
+        id=?
+2026-06-25 23:12:59.984 [http-nio-8080-exec-5] INFO  c.p.r.c.CustomerWebController - Deleted customer id=3
+2026-06-25 23:13:00.001 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    order by
+        c1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:00.065 [http-nio-8080-exec-7] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:17.168 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    order by
+        c1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:17.231 [http-nio-8080-exec-9] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:18.803 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    order by
+        mi1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:18.819 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(mi1_0.id) 
+    from
+        menu_items mi1_0
+2026-06-25 23:13:18.900 [http-nio-8080-exec-1] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:21.913 [http-nio-8080-exec-3] INFO  c.p.r.service.MenuItemService - Deleting menu item id=9
+2026-06-25 23:13:21.918 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-06-25 23:13:21.929 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        menu_items 
+    where
+        id=?
+2026-06-25 23:13:21.931 [http-nio-8080-exec-3] INFO  c.p.r.c.MenuItemWebController - Deleted menu item id=9
+2026-06-25 23:13:21.945 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    order by
+        mi1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:21.955 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(mi1_0.id) 
+    from
+        menu_items mi1_0
+2026-06-25 23:13:22.041 [http-nio-8080-exec-6] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:29.115 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    order by
+        mi1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:29.172 [http-nio-8080-exec-4] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:32.259 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    order by
+        mi1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:32.264 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        count(mi1_0.id) 
+    from
+        menu_items mi1_0
+2026-06-25 23:13:32.317 [http-nio-8080-exec-8] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:40.616 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0
+2026-06-25 23:13:40.621 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0 
+    where
+        ct1_0.id=?
+2026-06-25 23:13:40.623 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:13:40.623 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0 
+    where
+        ct1_0.id=?
+2026-06-25 23:13:40.631 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:13:40.720 [http-nio-8080-exec-10] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:46.619 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0 
+    order by
+        mi1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:46.628 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(mi1_0.id) 
+    from
+        menu_items mi1_0
+2026-06-25 23:13:46.703 [http-nio-8080-exec-3] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:50.307 [http-nio-8080-exec-2] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-8080-exec-2] Exception processing template "menu-items/form": An error happened during template parsing (template: "class path resource [templates/menu-items/form.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/menu-items/form.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: org.attoparser.ParseException: Error during execution of processor 'org.thymeleaf.spring6.processor.SpringInputGeneralFieldTagProcessor' (template: "menu-items/form" - line 22, col 46)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.spring6.processor.SpringInputGeneralFieldTagProcessor' (template: "menu-items/form" - line 22, col 46)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:117)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.InvalidPropertyException: Invalid property 'price' of bean class [com.proiect.restaurant.dto.MenuItemRequest]: Getter for property 'price' threw exception
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:717)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:615)
+	at org.springframework.validation.AbstractPropertyBindingResult.getActualFieldValue(AbstractPropertyBindingResult.java:104)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:225)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:129)
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:926)
+	at org.thymeleaf.spring6.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:232)
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306)
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:253)
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:227)
+	at org.thymeleaf.spring6.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	... 69 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:116)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.beans.BeanWrapperImpl$BeanPropertyHandler.getValue(BeanWrapperImpl.java:272)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:628)
+	... 80 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because "this.price" is null
+	at com.proiect.restaurant.dto.MenuItemRequest.getPrice(MenuItemRequest.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 83 common frames omitted
+2026-06-25 23:13:50.307 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/menu-items/form.html]")] with root cause
+java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because "this.price" is null
+	at com.proiect.restaurant.dto.MenuItemRequest.getPrice(MenuItemRequest.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.beans.BeanWrapperImpl$BeanPropertyHandler.getValue(BeanWrapperImpl.java:272)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:628)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:615)
+	at org.springframework.validation.AbstractPropertyBindingResult.getActualFieldValue(AbstractPropertyBindingResult.java:104)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:225)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:129)
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:926)
+	at org.thymeleaf.spring6.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:232)
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306)
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:253)
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:227)
+	at org.thymeleaf.spring6.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:50.359 [http-nio-8080-exec-6] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:51.879 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0
+2026-06-25 23:13:51.888 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0
+2026-06-25 23:13:51.901 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:51.907 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:51.909 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:51.915 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:51.917 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:51.920 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:51.923 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price 
+    from
+        menu_items mi1_0
+2026-06-25 23:13:51.926 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0
+2026-06-25 23:13:51.934 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.customer_id,
+        o1_0.order_time,
+        o1_0.status,
+        o1_0.total_price 
+    from
+        orders o1_0
+2026-06-25 23:13:51.938 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        o1_0.status,
+        o1_0.total_price,
+        r1_0.receipt_number,
+        r1_0.total_price 
+    from
+        receipts r1_0 
+    join
+        orders o1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    where
+        r1_0.order_id=?
+2026-06-25 23:13:51.939 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.issue_time,
+        r1_0.order_id,
+        o1_0.id,
+        o1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        o1_0.order_time,
+        o1_0.status,
+        o1_0.total_price,
+        r1_0.receipt_number,
+        r1_0.total_price 
+    from
+        receipts r1_0 
+    join
+        orders o1_0 
+            on o1_0.id=r1_0.order_id 
+    left join
+        customers c1_0 
+            on c1_0.id=o1_0.customer_id 
+    where
+        r1_0.order_id=?
+2026-06-25 23:13:51.939 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        order_items oi1_0 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        oi1_0.order_id=?
+2026-06-25 23:13:51.946 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        oi1_0.order_id,
+        oi1_0.id,
+        oi1_0.menu_item_id,
+        mi1_0.id,
+        mi1_0.available,
+        mi1_0.description,
+        mi1_0.name,
+        mi1_0.price,
+        oi1_0.price,
+        oi1_0.quantity 
+    from
+        order_items oi1_0 
+    left join
+        menu_items mi1_0 
+            on mi1_0.id=oi1_0.menu_item_id 
+    where
+        oi1_0.order_id=?
+2026-06-25 23:13:51.991 [http-nio-8080-exec-4] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:54.248 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    order by
+        c1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:13:54.300 [http-nio-8080-exec-8] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:13:57.527 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ct1_0.id,
+        ct1_0.capacity,
+        ct1_0.table_number 
+    from
+        cafe_tables ct1_0
+2026-06-25 23:13:57.537 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:57.538 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:13:57.543 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:57.543 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:57.548 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:57.554 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:57.555 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2026-06-25 23:13:57.556 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.table_id,
+        r1_0.customer_id,
+        r1_0.duration,
+        r1_0.reservation_time,
+        r1_0.status 
+    from
+        reservations r1_0 
+    where
+        r1_0.table_id=? 
+        and r1_0.status not in (?, ?)
+2026-06-25 23:13:57.625 [http-nio-8080-exec-10] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:14:00.638 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    order by
+        c1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:14:00.692 [http-nio-8080-exec-3] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:14:03.275 [http-nio-8080-exec-6] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-06-25 23:14:07.595 [http-nio-8080-exec-5] INFO  c.p.r.service.CustomerService - Creating customer with email=carpmarcel@yahoo.com
+2026-06-25 23:14:07.600 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        customers c1_0 
+    where
+        c1_0.email=? 
+    fetch
+        first ? rows only
+2026-06-25 23:14:07.600 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (email, name, phone, id) 
+    values
+        (?, ?, ?, default)
+2026-06-25 23:14:07.606 [http-nio-8080-exec-5] INFO  c.p.r.c.CustomerWebController - Created customer email=carpmarcel@yahoo.com
+2026-06-25 23:14:07.613 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customers c1_0 
+    order by
+        c1_0.name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-25 23:14:07.662 [http-nio-8080-exec-7] ERROR c.p.r.e.GlobalExceptionHandler - Unhandled exception: No static resource favicon.ico.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
