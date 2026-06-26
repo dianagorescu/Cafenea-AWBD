@@ -150,8 +150,6 @@ cmd.exe /c ".\mvnw.cmd -Dspring-boot.run.profiles=h2 spring-boot:run"
 - **Pagina clienți**
 ![alt text](image-6.png)
 
-- **Pagina produse**
-![alt text](image-1.png)
 
 - **Pagina mese**
 ![alt text](image-7.png)
