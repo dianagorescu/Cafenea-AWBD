@@ -141,20 +141,23 @@ cmd.exe /c ".\mvnw.cmd -Dspring-boot.run.profiles=h2 spring-boot:run"
 - `GET /api/tables/available` - listează mesele disponibile
 
 ## Screenshots
+- **Pagina dashboard**
+![alt text](image-8.png)
 
+- **Pagina login/register**
+![alt text](image-9.png)
 
 - **Pagina clienți**
-![alt text](image.png)
+![alt text](image-6.png)
 
 - **Pagina produse**
 ![alt text](image-1.png)
 
-- **Pagina comenzi**
-![alt text](image-2.png)
-
+- **Pagina mese**
+![alt text](image-7.png)
 
 - **Pagina rezervări**
-![alt text](image-3.png)
+![alt text](image-5.png)
 
 
 
@@ -176,5 +179,5 @@ Proiectul este gândit pentru dezvoltare rapidă și testare locală cu H2. Pent
 <img width="507" height="219" alt="image" src="https://github.com/user-attachments/assets/0a5bbf0c-5c7e-40f2-a2a5-959c6386d7cc" />
 
 -final
-<img width="579" height="163" alt="image" src="https://github.com/user-attachments/assets/33abe226-fda6-49ab-93da-2991b2c4407f" />
+![alt text](image-4.png)
 
