@@ -161,9 +161,8 @@ cmd.exe /c ".\mvnw.cmd -Dspring-boot.run.profiles=h2 spring-boot:run"
 
 ## Contribuții membrii echipei
 
-- **Diana** – implementare backend Spring Boot, logare SLF4J/Logback, servicii, paginare și sortare, API-uri, validare, design UI cu Thymeleaf și Tailwind.
-- **Marcel** – gestionare baze de date, migrari, entități JPA, inițializare date, testare.
-- **Diana** – integrare frontend, implementare template-uri Thymeleaf, navigare pagină, documentație.
+- **Diana** – implementare backend Spring Boot, logare SLF4J/Logback, servicii, paginare și sortare, API-uri, validare, design UI cu Thymeleaf și Tailwind, documentație.
+- **Marcel** – gestionare baze de date, migrari, entități JPA, inițializare date, testare, frontend.
 
 ## Notă
 
